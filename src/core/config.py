@@ -1,7 +1,7 @@
 from pydantic import BaseSettings
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "My FastAPI Project"
+    PROJECT_NAME: str = "Hello World Backend"
     DATABASE_URL: str = "sqlite+aiosqlite:///./test.db"
     SECRET_KEY: str
     ALGORITHM: str = "HS256"

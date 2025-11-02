@@ -10,12 +10,12 @@ async def create_tables():
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    description="Una API moderna y asíncrona para gestionar usuarios, construida con FastAPI y SQLAlchemy.",
+    description="Una API moderna y asíncrona para gestionar la plataforma de aprendizaje de programación con videjuegos",
     version="1.0.0",
     contact={
-        "name": "Tu Nombre",
+        "name": "Johny A. Pedraza Romero",
         "url": "http://tuwebsite.com",
-        "email": "tu@email.com",
+        "email": "jhonnyantonio892@gmail.com",
     },
     openapi_tags=[
         {
