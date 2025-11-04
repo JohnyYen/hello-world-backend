@@ -1,0 +1,17 @@
+from sqlalchemy import Column, String, DateTime, JSON, Integer, ForeignKey
+from sqlalchemy.orm import relationship
+from src.db.base import Base
+
+
+class SyncEvent(Base):
+    __tablename__ = "sync_events"
+
+    event_type = Column(String(255), nullable=False)
+    payload = Column(JSON, nullable=True)
+    timestamp = Column(DateTime, nullable=False)
+    status = Column(String(255), nullable=True)
+
+    sync_session_id = Column(Integer, ForeignKey("sync_sessions.id"), nullable=False)
+
+    # Relationships
+    sync_session = relationship("SyncSession", back_populates="events")

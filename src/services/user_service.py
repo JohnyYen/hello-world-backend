@@ -6,7 +6,8 @@ from src.db.session import get_db
 from src.db.repositories.user_repository import UserRepository
 from src.schemas.user import UserCreate, UserUpdate
 from src.models.user import User
-from src.core.exceptions import NotFoundException
+from src.core.exceptions import NotFoundException, InvalidCredentialsException
+from src.core.security import verify_password
 
 
 class UserService:

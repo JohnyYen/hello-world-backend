@@ -7,8 +7,7 @@ from alembic import context
 
 # Import our models and database configuration
 from src.db.base import Base
-from src.models.user import User
-from src.models.role import Role
+from src.models import * 
 from src.core.config import settings
 import re
 
