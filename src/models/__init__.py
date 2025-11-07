@@ -12,6 +12,7 @@ from .sync_session import SyncSession
 from .sync_event import SyncEvent
 from .feedback import Feedback
 from .metric_type import MetricType
+from .teacher_settings import TeacherSettings
 
 __all__ = [
     "Role",
@@ -28,4 +29,5 @@ __all__ = [
     "SyncEvent",
     "Feedback",
     "MetricType",
+    "TeacherSettings",
 ]

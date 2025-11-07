@@ -22,3 +22,4 @@ class User(Base):
     lms_credential = relationship("LMSCredential", back_populates="user")
     student = relationship("Student", back_populates="user", uselist=False)
     professor = relationship("Professor", back_populates="user", uselist=False)
+    teacher_settings = relationship("TeacherSettings", back_populates="user", uselist=False)

@@ -16,13 +16,7 @@ app = FastAPI(
         "name": "Johny A. Pedraza Romero",
         "url": "http://tuwebsite.com",
         "email": "jhonnyantonio892@gmail.com",
-    },
-    openapi_tags=[
-        {
-            "name": "Users",
-            "description": "Operaciones para crear, leer, actualizar y eliminar usuarios.",
-        }
-    ]
+    }
 )
 
 @app.on_event("startup")
