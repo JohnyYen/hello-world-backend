@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from src.api.v1.routers import api_router
 from src.core.config import settings
 from src.db.base import Base
+from src.db.seed.run_seed import run_all_seeds
 from src.db.session import engine
 
 async def create_tables():
@@ -22,6 +23,7 @@ app = FastAPI(
 @app.on_event("startup")
 async def on_startup():
     await create_tables()
+    await run_all_seeds()
 
 app.include_router(api_router, prefix="/api/v1")
 

@@ -9,7 +9,7 @@ class User(Base):
     username = Column(String(255), unique=True, index=True, nullable=False)
     password = Column(String(255), nullable=False)
     name = Column(String(255), nullable=False)
-    lastname = Column(String(255), nullable=False)
+    lastname = Column(String(255), nullable=True)
     email = Column(String(255), unique=True, index=True, nullable=False)
     lms_id = Column(String(255), ForeignKey("lms_credentials.id"), nullable=True)
     avatar_url = Column(String(255), nullable=True)
